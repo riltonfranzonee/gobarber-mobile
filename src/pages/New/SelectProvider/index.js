@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import PropTypes from 'prop-types';
 
 import api from '~/services/api';
 
@@ -55,3 +56,11 @@ SelectProvider.navigationOptions = ({ navigation }) => ({
     </TouchableOpacity>
   ),
 });
+
+SelectProvider.propTypes = {
+  navigation: PropTypes.object,
+};
+
+SelectProvider.defaultProps = {
+  navigation: PropTypes.object,
+};
