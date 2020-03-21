@@ -1,10 +1,9 @@
-
 <h1 align="center">
-    <img src="https://user-images.githubusercontent.com/58868651/75586094-56e6b600-5a52-11ea-9817-eff23d71134e.png" />
+    <img src="https://user-images.githubusercontent.com/58868651/77218705-ee4c9f80-6b0c-11ea-9948-d6a72eb99cba.png" />
 </h1>
 
 <p align="center">
-Full control system for a shipping company - Mobile version made with React Native
+Barbershop system that connects clients and providers - Mobile application made with React Native
 </p>
 
 💈 About GoBarber
