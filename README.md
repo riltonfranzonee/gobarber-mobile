@@ -8,7 +8,7 @@ Barbershop system that connects clients and providers - Mobile application made 
 
 💈 About GoBarber
 ------------------
-This project is a system of a fictional barbershop called GoBarber. The full system has a [**web version**](https://github.com/riltonfranzonee/gobarber) made with ReactJS, an exclusive area for providers, where they are able to list all their appointments, change personal info and recieve notifications everytime a new appointment is created (also via email). The application also has a [**mobile version**](https://github.com/riltonfranzonee/gobarber-mobile) made with React Native, an exclusive area for clients, where they are able to create a new appointment with their favorite provider based on the available schedule. Besides that, the client is able to cancel the appointment (must be at most 2 hours before the appointment). All this system is served by a [**RESTful API**](https://github.com/riltonfranzonee/gobarber-api) made with Node.js 
+This project is a system of a fictional barbershop called GoBarber. The full system has a [**web version**](https://github.com/riltonfranzonee/gobarber) made with ReactJS, an exclusive area for providers, where they are able to list all their appointments, change personal info and recieve notifications everytime a new appointment is created (also via email). The application also has a [**mobile version**](https://github.com/riltonfranzonee/gobarber-mobile) made with React Native, an exclusive area for clients, where they are able to create a new appointment with their favorite provider based on the available schedule. Besides that, the client is able to cancel the appointment (must be at most 2 hours before the appointment). All this system is served by a [**REST API**](https://github.com/riltonfranzonee/gobarber-api) made with Node.js 
  
  <table>
   <tr>
@@ -87,7 +87,7 @@ $ yarn
 $ react-native run-ios
 ```
 
-Make sure you have the [**RESTful API**](https://github.com/riltonfranzonee/gobarber-api) up and running.
+Make sure you have the [**REST API**](https://github.com/riltonfranzonee/gobarber-api) up and running.
 
 
 :speech_balloon: Reach me
