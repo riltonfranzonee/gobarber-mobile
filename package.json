@@ -14,6 +14,7 @@
     "@react-native-community/masked-view": "^0.1.6",
     "axios": "^0.19.2",
     "date-fns": "^2.10.0",
+    "i18n-js": "^3.5.1",
     "immer": "^5.3.6",
     "prop-types": "^15.7.2",
     "react": "16.9.0",

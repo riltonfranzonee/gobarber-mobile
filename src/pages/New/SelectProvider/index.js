@@ -7,6 +7,7 @@ import api from '~/services/api';
 
 import Background from '~/components/Background';
 import { Container, ProvidersList, Provider, Avatar, Name } from './styles';
+import {translate} from '~/locales';
 
 export default function SelectProvider({ navigation }) {
   const [providers, setProviders] = useState([]);
@@ -49,7 +50,7 @@ export default function SelectProvider({ navigation }) {
 }
 
 SelectProvider.navigationOptions = ({ navigation }) => ({
-  title: 'Selecione o prestador',
+  title: translate('selectProvider'),
   headerLeft: () => (
     <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
       <Icon name="chevron-left" size={25} color="#fff" />
