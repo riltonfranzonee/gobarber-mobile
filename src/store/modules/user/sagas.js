@@ -5,6 +5,7 @@ import { all, takeLatest, put, call } from 'redux-saga/effects';
 import api from '~/services/api';
 
 import { updateProfileSuccess, updateProfileFailure } from './actions';
+import { translate } from '~/locales';
 
 export function* updateProfile({ payload }) {
   try {
@@ -18,12 +19,12 @@ export function* updateProfile({ payload }) {
 
     const response = yield call(api.put, 'users', profile);
 
-    Alert.alert('Perfil atualizado com sucesso');
+    Alert.alert(translate('profile_updated_successfully'));
     yield put(updateProfileSuccess(response.data));
   } catch (err) {
     Alert.alert(
-      'Falha na atualização',
-      'Houve um erro no atualização do seu perfil, verifique seus dados'
+      translate('update_failed'),
+      translate('there_was_an_error_updating_your_profile_check_your_data')
     );
     yield put(updateProfileFailure());
   }

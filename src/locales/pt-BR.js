@@ -17,6 +17,19 @@ const pt = {
   create_an_account: 'Criar conta',
   already_have_an_account: 'Já tenho uma conta',
   access: 'Acessar',
+
+  login_error: 'Erro no login',
+  user_cannot_be_provider: 'Usuário não pode ser prestador',
+  authentication_failed: 'Falha na autenticação',
+  there_was_an_error_in_the_login_check_your_credentials:
+    'Houve um erro no login, verifique suas credenciais',
+  registration_failed: 'Falha no cadastro',
+  there_was_an_error_in_the_registration_check_your_data:
+    'Houve um erro no cadastro, verifique seus dados',
+  profile_updated_successfully: 'Perfil atualizado com sucesso',
+  update_failed: 'Falha na atualização',
+  there_was_an_error_updating_your_profile_check_your_data:
+    'Houve um erro no atualização do seu perfil, verifique seus dados',
 };
 
 export default pt;

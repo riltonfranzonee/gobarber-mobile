@@ -17,6 +17,19 @@ const en = {
   create_an_account: 'Create an account',
   already_have_an_account: 'Already have an account',
   access: 'Access',
+
+  login_error: 'Login error',
+  user_cannot_be_provider: 'User cannot be provider',
+  authentication_failed: 'Authentication failed',
+  there_was_an_error_in_the_login_check_your_credentials:
+    'There was an error in the login, check your credentials',
+  registration_failed: 'Registration failed',
+  there_was_an_error_in_the_registration_check_your_data:
+    'There was an error in the registration, check your data',
+  profile_updated_successfully: 'Profile updated successfully',
+  update_failed: 'Update failed',
+  there_was_an_error_updating_your_profile_check_your_data:
+    'Houve um erro no atualização do seu perfil, verifique seus dados',
 };
 
 export default en;
