@@ -9,6 +9,7 @@ import api from '~/services/api';
 
 import Background from '~/components/Background';
 import { Container, Avatar, Name, Time, SubmitButton } from './styles';
+import {translate} from '~/locales';
 
 export default function Confirm({ navigation }) {
   const provider = navigation.getParam('provider');
@@ -41,7 +42,7 @@ export default function Confirm({ navigation }) {
         <Time>{dateFormatted}</Time>
 
         <SubmitButton onPress={handleAddAppointment}>
-          Confirmar agendamento
+          {translate('confirm_schedule')}
         </SubmitButton>
       </Container>
     </Background>
@@ -49,7 +50,7 @@ export default function Confirm({ navigation }) {
 }
 
 Confirm.navigationOptions = ({ navigation }) => ({
-  title: 'Confirme o agendamento',
+  title: translate('confirm_schedule'),
   headerLeft: () => (
     <TouchableOpacity onPress={() => navigation.goBack()}>
       <Icon name="chevron-left" size={25} color="#fff" />

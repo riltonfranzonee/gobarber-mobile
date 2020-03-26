@@ -6,6 +6,8 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import { Container, Left, Avatar, Info, Name, Time } from './styles';
 
+import { translate } from '../../locales';
+
 export default function Appointment({ data, onCancel }) {
   const dateParsed = useMemo(() => {
     return formatRelative(parseISO(data.date), new Date(), {
@@ -25,7 +27,7 @@ export default function Appointment({ data, onCancel }) {
         />
         <Info>
           <Name>{data.provider.name}</Name>
-          <Time>{!data.canceled_at ? dateParsed : 'Cancelado'}</Time>
+          <Time>{!data.canceled_at ? dateParsed : translate('canceled')}</Time>
         </Info>
       </Left>
 

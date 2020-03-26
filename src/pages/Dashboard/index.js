@@ -8,6 +8,7 @@ import { Container, Title, List } from './styles';
 
 import Background from '~/components/Background';
 import Appointment from '~/components/Appointment';
+import { translate } from '~/locales';
 
 function Dashboard({ isFocused }) {
   const [appointments, setAppointments] = useState([]);
@@ -30,9 +31,9 @@ function Dashboard({ isFocused }) {
       appointments.map(appointment =>
         appointment.id === id
           ? {
-              ...appointment,
-              canceled_at: response.data.canceled_at,
-            }
+            ...appointment,
+            canceled_at: response.data.canceled_at,
+          }
           : appointment
       )
     );
@@ -40,7 +41,7 @@ function Dashboard({ isFocused }) {
   return (
     <Background>
       <Container>
-        <Title>Agendamentos</Title>
+        <Title>{translate('schedules')}</Title>
         <List
           data={appointments}
           keyExtractor={item => String(item.id)}
@@ -54,7 +55,7 @@ function Dashboard({ isFocused }) {
 }
 
 Dashboard.navigationOptions = {
-  tabBarLabel: 'Agendamentos',
+  tabBarLabel: translate('schedules'),
   tabBarIcon: ({ tintColor }) => (
     <Icon name="event" size={20} color={tintColor} />
   ),

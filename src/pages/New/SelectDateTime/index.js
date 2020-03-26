@@ -9,6 +9,7 @@ import Background from '~/components/Background';
 import DateInput from '~/components/DateInput';
 
 import { Container, HourList, Hour, Title } from './styles';
+import {translate} from '~/locales';
 
 export default function SelectDateTime({ navigation }) {
   const [date, setDate] = useState(new Date());
@@ -57,7 +58,7 @@ export default function SelectDateTime({ navigation }) {
 }
 
 SelectDateTime.navigationOptions = ({ navigation }) => ({
-  title: 'Selecione o horário',
+  title: translate('select_time'),
   headerLeft: () => (
     <TouchableOpacity onPress={() => navigation.goBack()}>
       <Icon name="chevron-left" size={25} color="#fff" />

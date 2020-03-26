@@ -6,6 +6,7 @@ import { takeLatest, all, call, put } from 'redux-saga/effects';
 import api from '~/services/api';
 
 import { signInSuccess, signFailure } from './actions';
+import { translate } from '~/locales';
 
 export function* signIn({ payload }) {
   try {
@@ -18,7 +19,10 @@ export function* signIn({ payload }) {
     const { token, user } = response.data;
 
     if (user.provider) {
-      Alert.alert('Erro no login', 'Usuário não pode ser prestador');
+      Alert.alert(
+        translate('login_error'),
+        translate('user_cannot_be_provider')
+      );
       return;
     }
 
@@ -29,8 +33,8 @@ export function* signIn({ payload }) {
     // history.push('/dashboard');
   } catch (err) {
     Alert.alert(
-      'Falha na autenticação',
-      'Houve um erro no login, verifique suas credenciais'
+      translate('authentication_failed'),
+      translate('there_was_an_error_in_the_login_check_your_credentials')
     );
     yield put(signFailure());
   }
@@ -48,8 +52,8 @@ export function* signUp({ payload }) {
     // history.push('/');
   } catch (err) {
     Alert.alert(
-      'Falha no cadastro',
-      'Houve um erro no cadastro, verifique seus dados'
+      translate('registration_failed'),
+      translate('there_was_an_error_in_the_registration_check_your_data')
     );
     yield put(signFailure());
   }

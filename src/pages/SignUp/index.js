@@ -6,7 +6,7 @@ import logo from '~/assets/logo.png';
 
 import Background from '~/components/Background';
 import { signUpRequest } from '~/store/modules/auth/actions';
-
+import {translate} from '~/locales';
 import {
   Container,
   Form,
@@ -40,7 +40,7 @@ export default function SignIn({ navigation }) {
             icon="person-outline"
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Nome completo"
+            placeholder={translate('full_name')}
             returnKeyType="next"
             onSubmitEditing={() => emailRef.current.focus()}
             value={name}
@@ -51,7 +51,7 @@ export default function SignIn({ navigation }) {
             keyboardType="email-address"
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Digite seu email"
+            placeholder={translate('your_email')}
             ref={emailRef}
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
@@ -61,7 +61,7 @@ export default function SignIn({ navigation }) {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Digite sua senha"
+            placeholder={translate('your_password')}
             ref={passwordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
@@ -69,11 +69,11 @@ export default function SignIn({ navigation }) {
             onChangeText={setPassword}
           />
           <SubmitButton loading={loading} onPress={handleSubmit}>
-            Criar conta
+          {translate('create_an_account')}
           </SubmitButton>
         </Form>
         <SignLink onPress={() => navigation.navigate('SignIn')}>
-          <SignLinkText>Já tenho uma conta</SignLinkText>
+          <SignLinkText>{translate('already_have_an_account')}</SignLinkText>
         </SignLink>
       </Container>
     </Background>
